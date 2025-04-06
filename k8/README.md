@@ -4,14 +4,13 @@
 
 ### **README for Task 2: Deploying a Hello World Application with Secrets Management**
 
-```markdown
-# Task 2: Deploy a Hello World Application and Manage Secrets in EKS
+# **Task 2: Deploy a Hello World Application and Manage Secrets in EKS**
 
-## Overview
+## **Overview**
 
 In this task, I deployed a simple **Hello World** application to the **EKS cluster** and managed sensitive data using **AWS Secrets Manager** and **External Secrets Operator**. Additionally, I exposed the application via **Ingress** so that it could be accessed externally.
 
-## Prerequisites
+## **Prerequisites**
 
 1. **Working EKS Cluster**: You need an **EKS cluster** set up from Task 1, which is accessible via `kubectl`.
 2. **kubectl**: Install `kubectl` to interact with the Kubernetes cluster. 
@@ -19,7 +18,12 @@ In this task, I deployed a simple **Hello World** application to the **EKS clust
 4. **AWS Secrets Manager**: You need to have an **AWS Secret** created in **Secrets Manager**. This will hold sensitive information like passwords or API keys.
 5. **Ingress Controller**: Ensure you have an **Ingress Controller** (like **Nginx** or **ALB Ingress Controller**) set up in your EKS cluster. This is necessary for routing traffic to the application.
 
+
+
+
 ### Step-by-Step Instructions
+
+
 
 ### 1. **Install the External Secrets Operator**
 
@@ -31,7 +35,8 @@ The **External Secrets Operator** is a Kubernetes operator that fetches secrets 
 
    ```bash
    kubectl apply -f https://github.com/external-secrets/external-secrets/releases/download/v0.6.0/external-secrets-crds.yaml
-2. Create a Secret in AWS Secrets Manager
+   
+**2. Create a Secret in AWS Secrets Manager
 In AWS Secrets Manager, create a new secret to store sensitive data. For example:
 
 Secret Name: MySecret
@@ -73,4 +78,4 @@ kubectl get pods
 
 Verify the Ingress to check if the application is exposed:
 kubectl get ingress hello-world-ingress
-
+**
