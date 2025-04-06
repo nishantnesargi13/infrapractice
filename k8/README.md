@@ -38,7 +38,7 @@ The **External Secrets Operator** is a Kubernetes operator that fetches secrets 
 
    
    
-****2**. Create a Secret in AWS Secrets Manager****
+******2**. Create a Secret in AWS Secrets Manager******************
 
 In AWS Secrets Manager, create a new secret to store sensitive data. For example:
 
@@ -50,7 +50,7 @@ Make sure to note the Secret ARN for use in the next step.
 
 
 
-****3. Create Kubernetes Resources to Manage Secrets****
+******3. Create Kubernetes Resources to Manage Secrets**************
 
 Create a SecretStore: This is a custom resource that defines how Kubernetes will connect to AWS Secrets Manager.
 
@@ -60,17 +60,17 @@ These resources ensure that Kubernetes pulls the secrets from AWS and securely i
 
 
 
-****4. Deploy the Hello World Application****
+******4. Deploy the Hello World Application**********
 Create a Deployment: The application to be deployed is a simple Nginx container that serves a "Hello World" page.
 
 Create a Service: This service exposes the Hello World app within the Kubernetes cluster.
 
-****5. Expose the Application Using Ingress****
+******5. Expose the Application Using Ingress**********
    
 Create an Ingress Resource: The Ingress resource allows external access to the application via a domain or public IP. This is configured to route traffic to the Nginx-based Hello World app.
 
 **
-******6. Apply the Resources****
+********6. Apply the Resources**********
 
 Once the manifests for the secrets, deployments, services, and ingress are ready, use kubectl to apply them to the cluster:
 
@@ -86,7 +86,7 @@ kubectl apply -f hello-world-service.yaml
 kubectl apply -f hello-world-ingress.yaml**
 
 
-****7. Verify the Deployment****
+******7. Verify the Deployment**************
 
 Check the pods:
 
