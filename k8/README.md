@@ -67,11 +67,11 @@ Create an Ingress Resource: The Ingress resource allows external access to the a
 6. Apply the Resources
 
 Once the manifests for the secrets, deployments, services, and ingress are ready, use kubectl to apply them to the cluster:
-kubectl apply -f secretstore.yaml
+**kubectl apply -f secretstore.yaml
 kubectl apply -f externalsecret.yaml
 kubectl apply -f hello-world-deployment.yaml
 kubectl apply -f hello-world-service.yaml
-kubectl apply -f hello-world-ingress.yaml
+kubectl apply -f hello-world-ingress.yaml**
 
 7. Verify the Deployment
 
