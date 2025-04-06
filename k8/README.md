@@ -70,9 +70,13 @@ Once the manifests for the secrets, deployments, services, and ingress are ready
 
 
 **kubectl apply -f secretstore.yaml
+
 kubectl apply -f externalsecret.yaml
+
 kubectl apply -f hello-world-deployment.yaml
+
 kubectl apply -f hello-world-service.yaml
+
 kubectl apply -f hello-world-ingress.yaml**
 
 7. Verify the Deployment
