@@ -37,6 +37,7 @@ The **External Secrets Operator** is a Kubernetes operator that fetches secrets 
    kubectl apply -f https://github.com/external-secrets/external-secrets/releases/download/v0.6.0/external-secrets-crds.yaml
    
 **2. Create a Secret in AWS Secrets Manager
+
 In AWS Secrets Manager, create a new secret to store sensitive data. For example:
 
 Secret Name: MySecret
@@ -46,6 +47,7 @@ Key-Value Pair: password = mysecretpassword
 Make sure to note the Secret ARN for use in the next step.
 
 3. Create Kubernetes Resources to Manage Secrets
+4. 
 Create a SecretStore: This is a custom resource that defines how Kubernetes will connect to AWS Secrets Manager.
 
 Create an ExternalSecret: This resource references the AWS secret and tells Kubernetes to create a Kubernetes Secret from it.
@@ -58,11 +60,12 @@ Create a Deployment: The application to be deployed is a simple Nginx container 
 Create a Service: This service exposes the Hello World app within the Kubernetes cluster.
 
 5. Expose the Application Using Ingress
+   
 Create an Ingress Resource: The Ingress resource allows external access to the application via a domain or public IP. This is configured to route traffic to the Nginx-based Hello World app.
 
-DNS Configuration: (Optional) Set up a DNS record to point to the Ingress Controller's external IP or hostname, allowing users to access the application via a domain (e.g., hello-world.example.com).
 
 6. Apply the Resources
+
 Once the manifests for the secrets, deployments, services, and ingress are ready, use kubectl to apply them to the cluster:
 kubectl apply -f secretstore.yaml
 kubectl apply -f externalsecret.yaml
@@ -71,11 +74,12 @@ kubectl apply -f hello-world-service.yaml
 kubectl apply -f hello-world-ingress.yaml
 
 7. Verify the Deployment
-After applying the resources, verify the deployment:
 
 Check the pods:
+
 kubectl get pods
 
 Verify the Ingress to check if the application is exposed:
+
 kubectl get ingress hello-world-ingress
 **
