@@ -8,7 +8,7 @@ In this task, I provisioned an **Elastic Kubernetes Service (EKS)** cluster on A
 
 Before you begin, make sure you have the following:
 
-1. **AWS Account**: You need an AWS account. If you don't have one, you can sign up [here](https://aws.amazon.com/).
+1. **AWS Account**: You need an AWS account. 
 2. **AWS CLI**: Ensure you have the AWS CLI installed and configured with your AWS credentials. 
 3. **Terraform**: Install Terraform on your machine. 
 4. **kubectl**: Install kubectl to interact with your EKS cluster. 
